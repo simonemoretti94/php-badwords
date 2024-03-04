@@ -3,6 +3,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $phrase = htmlspecialchars($_POST["phrase"]);
     $word = htmlspecialchars($_POST["word"]);
+
+    if (empty($phrase) || empty($word)) {
+        header('Location: ./form.php');
+        exit();
+    }
+} else {
+    header('Location: ./form.php');
+    exit();
 }
 
 echo "Phrase: " . $phrase . "<br>";

@@ -12,10 +12,10 @@
     <div class="container">
         <form action="process.php" method="post">
             <div class="wrapper">
-                <label for="phrase">Phrase:</label><input type="text" name="phrase" id="phrase" placeholder="Write here your phrase">
+                <label for="phrase">Phrase:</label><input required type="text" name="phrase" id="phrase" placeholder="Write here your phrase">
             </div>
             <div class="wrapper">
-                <label for="word">Word:</label><input type="text" name="word" id="word" placeholder="Write here your word">
+                <label for="word">Word:</label><input required type="text" name="word" id="word" placeholder="Write here your word">
             </div>
             <button class="btn btn-primary mt-3" type="submit">submit</button>
         </form>
