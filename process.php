@@ -1,6 +1,9 @@
 <?php
-$phrase = $_POST["phrase"];
-$word = $_POST["word"];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $phrase = htmlspecialchars($_POST["phrase"]);
+    $word = htmlspecialchars($_POST["word"]);
+}
 
 echo "Phrase: " . $phrase . "<br>";
 echo "Phrase length: " . strlen($phrase) . "<br>";
@@ -9,6 +12,7 @@ $censored_phrase = str_replace($word, "***", $phrase);
 
 echo "Censored phrase: " . $censored_phrase . "<br>";
 echo "Censored phrase length: " . strlen($censored_phrase);
+
 ?>
 
 
