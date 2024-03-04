@@ -5,11 +5,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $word = htmlspecialchars($_POST["word"]);
 
     if (empty($phrase) || empty($word)) {
-        header('Location: ./form.php');
+        header('Location: ./index.php');
         exit();
     }
 } else {
-    header('Location: ./form.php');
+    header('Location: ./index.php');
     exit();
 }
 
